@@ -1,6 +1,6 @@
 # Wild Find Job  
 
-**Wild Find Job** est un projet collaboratif visant à créer une application d'aide à la recherche d'emploi dans le domaine de la Data en exploitant des données. Ce dépôt rassemble les fichiers, le code, et la documentation nécessaires pour réaliser ce projet.  
+**Wild Find Job** est un projet collaboratif visant à **créer une application d'aide à la recherche d'emploi dans le domaine de la Data** en exploitant des données. Ce dépôt rassemble les fichiers, le code, et la documentation nécessaires pour réaliser ce projet.  
 
 ## Sommaire  
 1. [Présentation du projet](#présentation-du-projet)  
@@ -33,4 +33,24 @@ wild-find-job/
 │   ├── backend/
 │   └── frontend/
 ├── tests/
+```
+---
+
+## Documentation  
+
+- [Description du projet](documentation/description.md)  
+- [Plan d'exécution](documentation/plan_execution.md)  
+- [Spécifications fonctionnelles](documentation/specifications_fonctionnelles.md)  
+
+---
+
+## Contributions  
+
+Pour contribuer, merci de :  
+ 
+1. Suivre la structure des dossiers décrite ci-dessus.  
+2. Soumettre vos modifications via une **pull request** accompagnée d'une description claire.  
+
+---
+
 
