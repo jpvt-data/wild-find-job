@@ -23,24 +23,25 @@ Voici la structure générale du dépôt :
 ```plaintext
 wild-find-job/
 ├── README.md
-├── documentation/
-│   ├── description.md
-│   ├── plan_execution.md
-│   ├── specifications_fonctionnelles.md
 ├── data/
-├── notebooks/
-├── src/
-│   ├── backend/
-│   └── frontend/
-├── tests/
+│   ├── documentation/
+│   │   ├── description.md
+│   │   ├── plan_execution.md
+│   │   ├── specifications_fonctionnelles.md
+│   ├── data/
+│   ├── notebooks/
+│   ├── src/
+│   │   ├── backend/
+│   │   └── frontend/
+│   ├── tests/
 ```
 ---
 
 ## Documentation  
 
-- [Description du projet](documentation/description.md)  
-- [Plan d'exécution](documentation/plan_execution.md)  
-- [Spécifications fonctionnelles](documentation/specifications_fonctionnelles.md)  
+- [Description du projet](./data/documentation/description_projet.md)  
+- [Plan d'exécution](./data/documentation/plan_execution.md)  
+- [Spécifications fonctionnelles](./data/documentation/specifications_fonctionnelles.md)  
 
 ---
 
