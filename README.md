@@ -1,3 +1,5 @@
+Voici le fichier complet dans un bloc Markdown :
+
 # 🛠️ Wild Find Job  
 
 **Wild Find Job** est un projet collaboratif visant à **créer une application d'aide à la recherche d'emploi dans le domaine de la Data** en exploitant des données. Ce dépôt rassemble les fichiers, le code, et la documentation nécessaires pour réaliser ce projet.
@@ -95,3 +97,5 @@ Les fichiers de documentation seront accessibles dans le répertoire data/docume
 	•	Description du projet : Contexte, objectifs et vision.
 	•	Plan d’exécution : Organisation des tâches et méthodologie.
 	•	Spécifications fonctionnelles : Détails des fonctionnalités principales.
+
+Tu peux maintenant copier directement ce bloc pour ton dépôt. Est-ce clair et utilisable ?
