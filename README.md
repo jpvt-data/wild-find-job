@@ -44,6 +44,8 @@ wild-find-job/
 │   ├── backend/             # Code source pour l'API ou le backend
 │   └── frontend/            # Code source pour l'interface utilisateur
 ├── tests/                   # Scripts et fichiers de test
+```
+
 
 Cette structure est évolutive et pourra être adaptée en fonction des besoins identifiés au fil du projet.
 
