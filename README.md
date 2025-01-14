@@ -104,7 +104,7 @@ Pour garantir une collaboration efficace et centralisée :
 ## 📖 Documentation  
 
 Les fichiers de documentation seront accessibles dans le répertoire `data/documentation/` et incluront :  
-- [**Description du projet**](./data/documentation/description.md) : Contexte, objectifs et vision.  
+- [**Description du projet**](./data/documentation/description_projet.md) : Contexte, objectifs et vision.  
 - [**Plan d’exécution**](./data/documentation/plan_execution.md) : Organisation des tâches et méthodologie.  
 - [**Spécifications fonctionnelles**](./data/documentation/specifications_fonctionnelles.md) : Détails des fonctionnalités principales.
 - [**Boîtes à idées**](./data/documentation/boite_a_idees.md)  
