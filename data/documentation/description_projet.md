@@ -2,6 +2,7 @@
 ## Enoncé
 
 - **[Lancement du Projet](https://wildcodeschool.github.io/data-training-resources/projet/projet-3/wild-find-job/)**
+- **[Ressources Wild](https://docs.google.com/document/d/125OscHfCOOmu_XtHZj9acDnzxyCBG1vF0SHSBnodIpY/edit?tab=t.0#heading=h.44ew2519ei6y)**
 
 ## Objectifs  
 
