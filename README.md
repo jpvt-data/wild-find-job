@@ -97,15 +97,14 @@ Pour garantir une collaboration efficace et centralisée :
    - Validation des contributions après revue par l’équipe pour éviter les conflits de code.  
 
 3. **Suivi agile**  
-   - Ajustements réguliers lors de réunions courtes pour valider les priorités et les étapes suivantes.  
-
-Cette méthodologie simple permettra à l’équipe de s’approprier le projet tout en respectant les délais.  
+   - Ajustements réguliers lors de réunions courtes pour valider les priorités et les étapes suivantes.    
 
 ---
 
 ## 📖 Documentation  
 
 Les fichiers de documentation seront accessibles dans le répertoire `data/documentation/` et incluront :  
-- **Description du projet** : Contexte, objectifs et vision.  
-- **Plan d’exécution** : Organisation des tâches et méthodologie.  
-- **Spécifications fonctionnelles** : Détails des fonctionnalités principales.  
+- [**Description du projet**](./data/documentation/description.md) : Contexte, objectifs et vision.  
+- [**Plan d’exécution**](./data/documentation/plan_execution.md) : Organisation des tâches et méthodologie.  
+- [**Spécifications fonctionnelles**](./data/documentation/specifications_fonctionnelles.md) : Détails des fonctionnalités principales.
+- [**Boîtes à idées**](./data/documentation/boite_a_idees.md)  
