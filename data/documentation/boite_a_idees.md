@@ -5,7 +5,6 @@
 ---
 ### Aurélie
 
-
 ---
 ### Philippe
 ![alt text](image.png)
