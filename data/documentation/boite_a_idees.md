@@ -9,7 +9,7 @@
 ---
 ### Philippe
 ![alt text](image.png)
-test_2
+
 ---
 ### Cédric
 
