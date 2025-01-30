@@ -7,7 +7,7 @@
 
 ---
 ### Philippe
-
+![alt text](image.png)
 
 ---
 ### Cédric
