@@ -1,0 +1,201 @@
+,suggestion,departement,niveau_experience,secteur_d_activite,taille_entreprise,type_de_contrat,teletravail,salaire
+0,Data Ingenieur,Alpes-de-Haute-Provence,Intermédiaire,Industrie,PME,CDI,Total,78429
+1,Data Analyst,Ain,Intermédiaire,Finance,PME,CDD,Total,93390
+2,Data Analyste,Alpes-de-Haute-Provence,Senior,Santé,PME,Stage,Aucun,73403
+3,Data Analyste,Val-d'Oise,Senior,Finance,PME,CDD,Total,50906
+4,Data Ingenieur,Aisne,Intermédiaire,Santé,Startup,CDI,Aucun,52703
+5,Data Scientist,Seine-Saint-Denis,Senior,Tech,PME,Freelance,Total,57610
+6,Data Engineer,Val-d'Oise,Junior,Finance,PME,CDI,Total,39089
+7,Data Scientist,Val-d'Oise,Junior,Santé,Grande entreprise,Freelance,Aucun,60629
+8,Data Scientist,Ain,Senior,Santé,Startup,CDD,Partiel,87580
+9,Data Scientist,Seine-Saint-Denis,Senior,Santé,PME,Stage,Partiel,88011
+10,Data Analyste,Ain,Senior,Tech,PME,CDD,Total,97262
+11,Data Ingenieur,Aisne,Junior,Autre,PME,CDI,Total,76096
+12,Data Analyste,Ain,Senior,Santé,Startup,Stage,Partiel,98703
+13,Data Analyst,France,Intermédiaire,Tech,Grande entreprise,CDD,Aucun,33486
+14,Data Engineer,Aisne,Intermédiaire,Santé,Grande entreprise,CDD,Total,40754
+15,Data Scientist,France,Senior,Santé,Grande entreprise,Freelance,Aucun,50181
+16,Data Ingenieur,Seine-Saint-Denis,Intermédiaire,Tech,Grande entreprise,Alternance,Aucun,32610
+17,Data Ingenieur,Val-de-Marne,Intermédiaire,Autre,PME,CDD,Total,35464
+18,Data Scientist,Seine-Saint-Denis,Intermédiaire,Santé,Startup,Freelance,Total,50891
+19,Data Analyst,Allier,Junior,Autre,PME,CDI,Partiel,68719
+20,Data Scientist,Alpes-de-Haute-Provence,Intermédiaire,Santé,Grande entreprise,CDD,Partiel,58520
+21,Data Analyste,Val-de-Marne,Intermédiaire,Tech,Startup,CDI,Total,77684
+22,Data Ingenieur,Val-de-Marne,Intermédiaire,Industrie,Startup,Stage,Total,84198
+23,Data Engineer,Seine-Saint-Denis,Senior,Autre,PME,Stage,Aucun,69314
+24,Data Analyste,Aisne,Senior,Tech,Grande entreprise,Stage,Partiel,82489
+25,Data Analyst,Ain,Senior,Santé,Grande entreprise,Stage,Partiel,91348
+26,Data Ingenieur,Aisne,Intermédiaire,Autre,Grande entreprise,Freelance,Aucun,59513
+27,Data Analyste,Hauts-de-Seine,Junior,Tech,Startup,Alternance,Partiel,89350
+28,Data Scientist,Alpes-de-Haute-Provence,Intermédiaire,Industrie,Startup,CDI,Total,39775
+29,Data Engineer,Alpes-de-Haute-Provence,Junior,Industrie,Startup,Freelance,Aucun,46772
+30,Data Ingenieur,Aisne,Intermédiaire,Industrie,Startup,CDI,Total,49492
+31,Data Ingenieur,Val-d'Oise,Senior,Autre,Grande entreprise,CDI,Total,34210
+32,Data Scientist,Hauts-de-Seine,Intermédiaire,Industrie,Grande entreprise,Freelance,Aucun,41101
+33,Data Analyst,Ain,Junior,Santé,Grande entreprise,Alternance,Partiel,96085
+34,Data Scientist,Allier,Intermédiaire,Santé,PME,Stage,Aucun,48949
+35,Data Analyste,Allier,Intermédiaire,Finance,Grande entreprise,CDD,Partiel,56615
+36,Data Engineer,Val-de-Marne,Junior,Marketing,Grande entreprise,Alternance,Aucun,43411
+37,Data Scientist,Ain,Senior,Industrie,Grande entreprise,CDI,Partiel,53657
+38,Data Engineer,Alpes-de-Haute-Provence,Junior,Santé,Grande entreprise,CDI,Partiel,47278
+39,Data Scientist,Val-d'Oise,Junior,Marketing,Grande entreprise,CDI,Partiel,92794
+40,Data Analyst,Val-d'Oise,Intermédiaire,Finance,Grande entreprise,Freelance,Aucun,81196
+41,Data Analyste,Val-de-Marne,Intermédiaire,Tech,Grande entreprise,Alternance,Partiel,50550
+42,Data Ingenieur,Alpes-de-Haute-Provence,Intermédiaire,Finance,PME,CDI,Aucun,84885
+43,Data Ingenieur,Allier,Intermédiaire,Autre,Grande entreprise,Stage,Aucun,49155
+44,Data Ingenieur,France,Junior,Industrie,PME,Stage,Partiel,71907
+45,Data Engineer,Seine-Saint-Denis,Intermédiaire,Autre,Startup,Alternance,Aucun,52466
+46,Data Analyst,Hauts-de-Seine,Senior,Autre,PME,Freelance,Aucun,50111
+47,Data Scientist,Aisne,Senior,Autre,PME,Stage,Aucun,94046
+48,Data Engineer,Val-d'Oise,Senior,Tech,Startup,Freelance,Partiel,57071
+49,Data Analyste,Allier,Senior,Autre,PME,Freelance,Total,56034
+50,Data Analyste,Ain,Junior,Industrie,Startup,CDD,Total,67286
+51,Data Analyst,Seine-Saint-Denis,Senior,Santé,PME,CDD,Total,93519
+52,Data Ingenieur,Val-de-Marne,Junior,Marketing,Startup,Stage,Aucun,60422
+53,Data Analyst,France,Intermédiaire,Finance,Grande entreprise,Alternance,Total,64057
+54,Data Analyst,Hauts-de-Seine,Intermédiaire,Finance,Grande entreprise,Stage,Total,98746
+55,Data Scientist,Val-de-Marne,Junior,Finance,PME,CDD,Aucun,60634
+56,Data Analyste,Hauts-de-Seine,Junior,Marketing,PME,CDI,Total,46207
+57,Data Analyst,Allier,Intermédiaire,Autre,Startup,Freelance,Partiel,88699
+58,Data Analyst,Ain,Senior,Autre,PME,Alternance,Total,85018
+59,Data Scientist,Ain,Intermédiaire,Marketing,Startup,Stage,Aucun,70903
+60,Data Scientist,Allier,Senior,Santé,Grande entreprise,Stage,Aucun,61901
+61,Data Ingenieur,Hauts-de-Seine,Intermédiaire,Finance,Grande entreprise,Stage,Aucun,86683
+62,Data Engineer,Aisne,Junior,Marketing,Grande entreprise,CDI,Total,53738
+63,Data Ingenieur,Ain,Intermédiaire,Tech,PME,Alternance,Total,61604
+64,Data Ingenieur,France,Intermédiaire,Marketing,Startup,CDI,Partiel,33976
+65,Data Analyste,Ain,Senior,Tech,Grande entreprise,CDD,Total,41853
+66,Data Ingenieur,Aisne,Junior,Finance,Grande entreprise,CDI,Partiel,96174
+67,Data Analyst,Val-d'Oise,Junior,Marketing,PME,Freelance,Total,35426
+68,Data Analyste,Alpes-de-Haute-Provence,Junior,Autre,Startup,CDI,Partiel,33436
+69,Data Analyst,Val-d'Oise,Senior,Finance,Grande entreprise,CDD,Total,64547
+70,Data Ingenieur,Aisne,Intermédiaire,Tech,PME,Freelance,Partiel,94868
+71,Data Engineer,France,Junior,Autre,Startup,CDD,Total,57762
+72,Data Scientist,France,Senior,Industrie,PME,Freelance,Aucun,68142
+73,Data Engineer,Allier,Intermédiaire,Finance,Grande entreprise,Stage,Total,30525
+74,Data Scientist,France,Junior,Industrie,Grande entreprise,Freelance,Total,79387
+75,Data Engineer,Aisne,Junior,Tech,Grande entreprise,CDD,Partiel,86493
+76,Data Ingenieur,Val-de-Marne,Junior,Autre,Startup,Alternance,Total,49092
+77,Data Engineer,Allier,Junior,Santé,Grande entreprise,Freelance,Aucun,38295
+78,Data Engineer,France,Junior,Industrie,PME,Freelance,Partiel,47088
+79,Data Ingenieur,Val-de-Marne,Intermédiaire,Autre,Grande entreprise,CDI,Total,75039
+80,Data Ingenieur,Val-de-Marne,Intermédiaire,Industrie,PME,Freelance,Total,71756
+81,Data Scientist,Ain,Junior,Santé,PME,Stage,Partiel,51942
+82,Data Analyste,Hauts-de-Seine,Intermédiaire,Finance,Grande entreprise,CDI,Partiel,52558
+83,Data Analyste,Ain,Junior,Finance,Startup,Stage,Partiel,39619
+84,Data Analyste,Val-d'Oise,Intermédiaire,Industrie,Startup,Alternance,Partiel,61042
+85,Data Scientist,Allier,Junior,Autre,PME,CDD,Total,72270
+86,Data Ingenieur,Alpes-de-Haute-Provence,Senior,Santé,Startup,Alternance,Partiel,77622
+87,Data Scientist,Hauts-de-Seine,Intermédiaire,Marketing,PME,CDD,Total,94447
+88,Data Ingenieur,Aisne,Intermédiaire,Santé,PME,Freelance,Partiel,85815
+89,Data Ingenieur,Alpes-de-Haute-Provence,Junior,Marketing,Startup,CDD,Aucun,79072
+90,Data Analyst,Hauts-de-Seine,Intermédiaire,Marketing,Grande entreprise,CDD,Partiel,89667
+91,Data Analyste,Alpes-de-Haute-Provence,Junior,Autre,Grande entreprise,CDI,Total,76230
+92,Data Analyste,Aisne,Junior,Finance,Startup,Stage,Total,70849
+93,Data Analyst,Seine-Saint-Denis,Junior,Santé,Grande entreprise,Freelance,Partiel,75107
+94,Data Ingenieur,Alpes-de-Haute-Provence,Senior,Autre,Grande entreprise,CDI,Total,65824
+95,Data Analyst,France,Intermédiaire,Finance,Grande entreprise,Stage,Partiel,74365
+96,Data Scientist,Ain,Intermédiaire,Industrie,PME,Alternance,Total,64817
+97,Data Engineer,Seine-Saint-Denis,Intermédiaire,Santé,Grande entreprise,CDI,Partiel,37609
+98,Data Analyste,Seine-Saint-Denis,Junior,Finance,PME,Stage,Total,70186
+99,Data Analyste,France,Junior,Industrie,PME,CDI,Total,57789
+100,Data Analyste,Val-d'Oise,Junior,Tech,Grande entreprise,Freelance,Partiel,32624
+101,Data Analyst,Hauts-de-Seine,Junior,Autre,PME,CDD,Aucun,70492
+102,Data Analyst,Val-d'Oise,Junior,Santé,Startup,Stage,Total,56667
+103,Data Engineer,Seine-Saint-Denis,Intermédiaire,Finance,PME,Alternance,Total,52959
+104,Data Ingenieur,Hauts-de-Seine,Intermédiaire,Marketing,PME,CDD,Total,82624
+105,Data Analyste,Aisne,Intermédiaire,Tech,Startup,Stage,Aucun,51106
+106,Data Ingenieur,Seine-Saint-Denis,Intermédiaire,Finance,PME,Freelance,Total,88476
+107,Data Scientist,Hauts-de-Seine,Senior,Autre,PME,Stage,Total,76963
+108,Data Engineer,Val-de-Marne,Junior,Industrie,Grande entreprise,Freelance,Partiel,67662
+109,Data Analyste,France,Intermédiaire,Industrie,Grande entreprise,CDI,Aucun,56595
+110,Data Ingenieur,Aisne,Senior,Finance,PME,Freelance,Aucun,75249
+111,Data Analyst,Val-de-Marne,Intermédiaire,Marketing,PME,CDD,Aucun,49245
+112,Data Analyste,Hauts-de-Seine,Intermédiaire,Finance,Startup,CDI,Total,78801
+113,Data Analyste,Allier,Senior,Tech,Grande entreprise,Alternance,Partiel,77964
+114,Data Ingenieur,Ain,Intermédiaire,Autre,Grande entreprise,CDI,Partiel,52737
+115,Data Analyst,Aisne,Intermédiaire,Santé,PME,CDI,Total,73336
+116,Data Ingenieur,Val-de-Marne,Senior,Marketing,Grande entreprise,CDD,Partiel,76163
+117,Data Analyst,Val-d'Oise,Junior,Santé,Startup,Alternance,Aucun,45638
+118,Data Scientist,Seine-Saint-Denis,Intermédiaire,Tech,Startup,CDI,Aucun,70959
+119,Data Scientist,France,Junior,Finance,PME,CDD,Aucun,83057
+120,Data Engineer,France,Junior,Industrie,PME,Alternance,Aucun,99843
+121,Data Engineer,Ain,Senior,Autre,Startup,Freelance,Total,68399
+122,Data Analyst,Seine-Saint-Denis,Intermédiaire,Santé,Grande entreprise,CDI,Total,30298
+123,Data Ingenieur,Hauts-de-Seine,Senior,Autre,PME,Stage,Total,85870
+124,Data Analyst,Hauts-de-Seine,Senior,Santé,Grande entreprise,Alternance,Total,58786
+125,Data Ingenieur,Val-de-Marne,Intermédiaire,Autre,Grande entreprise,Alternance,Total,51596
+126,Data Analyste,Val-de-Marne,Junior,Industrie,PME,CDD,Total,44068
+127,Data Analyste,Alpes-de-Haute-Provence,Junior,Santé,Grande entreprise,Alternance,Total,38272
+128,Data Analyste,Aisne,Junior,Tech,Grande entreprise,CDI,Total,78799
+129,Data Engineer,France,Junior,Tech,Startup,CDI,Aucun,99057
+130,Data Ingenieur,Aisne,Junior,Autre,Grande entreprise,Freelance,Aucun,74878
+131,Data Ingenieur,Allier,Intermédiaire,Santé,Grande entreprise,CDI,Aucun,96192
+132,Data Scientist,Val-de-Marne,Junior,Marketing,Grande entreprise,Freelance,Partiel,30914
+133,Data Analyste,Hauts-de-Seine,Senior,Marketing,PME,Alternance,Partiel,44694
+134,Data Analyst,Val-de-Marne,Senior,Finance,Grande entreprise,Stage,Partiel,75267
+135,Data Analyste,Seine-Saint-Denis,Junior,Industrie,Grande entreprise,CDD,Aucun,40138
+136,Data Scientist,Val-d'Oise,Junior,Finance,Startup,CDD,Total,68526
+137,Data Analyste,Aisne,Intermédiaire,Finance,PME,CDD,Total,64536
+138,Data Analyste,Aisne,Junior,Santé,Startup,Alternance,Aucun,76415
+139,Data Analyst,Val-d'Oise,Junior,Marketing,Grande entreprise,Alternance,Total,30063
+140,Data Ingenieur,Hauts-de-Seine,Senior,Santé,Grande entreprise,Freelance,Partiel,37799
+141,Data Ingenieur,Allier,Intermédiaire,Autre,Grande entreprise,Freelance,Aucun,72512
+142,Data Analyst,Ain,Junior,Santé,PME,CDD,Total,66685
+143,Data Scientist,Hauts-de-Seine,Senior,Marketing,Grande entreprise,CDD,Total,74620
+144,Data Ingenieur,Val-de-Marne,Junior,Marketing,PME,CDI,Total,54788
+145,Data Analyst,Allier,Junior,Santé,Startup,CDI,Partiel,90068
+146,Data Engineer,Alpes-de-Haute-Provence,Intermédiaire,Tech,Grande entreprise,Stage,Aucun,42837
+147,Data Engineer,Seine-Saint-Denis,Senior,Autre,Startup,Freelance,Total,66981
+148,Data Analyst,Alpes-de-Haute-Provence,Intermédiaire,Autre,Startup,CDD,Total,68188
+149,Data Engineer,Ain,Intermédiaire,Industrie,Grande entreprise,Stage,Aucun,46468
+150,Data Analyst,France,Intermédiaire,Marketing,Startup,Stage,Partiel,82226
+151,Data Engineer,Alpes-de-Haute-Provence,Intermédiaire,Santé,Grande entreprise,Alternance,Aucun,76756
+152,Data Engineer,France,Junior,Finance,Grande entreprise,Alternance,Partiel,76340
+153,Data Scientist,Val-d'Oise,Senior,Autre,Startup,CDI,Aucun,79106
+154,Data Engineer,France,Intermédiaire,Industrie,Grande entreprise,CDI,Aucun,68288
+155,Data Scientist,Allier,Senior,Marketing,Startup,Alternance,Total,60161
+156,Data Analyst,Val-de-Marne,Junior,Industrie,PME,CDD,Aucun,52756
+157,Data Engineer,Val-de-Marne,Intermédiaire,Marketing,PME,Alternance,Partiel,50252
+158,Data Engineer,Hauts-de-Seine,Senior,Industrie,Startup,CDI,Partiel,99955
+159,Data Scientist,Seine-Saint-Denis,Intermédiaire,Industrie,PME,Alternance,Aucun,53674
+160,Data Analyste,Allier,Senior,Finance,PME,CDI,Partiel,87431
+161,Data Analyste,Seine-Saint-Denis,Intermédiaire,Autre,Startup,CDI,Aucun,91092
+162,Data Scientist,Seine-Saint-Denis,Intermédiaire,Marketing,Grande entreprise,Freelance,Aucun,88580
+163,Data Scientist,Ain,Senior,Autre,PME,Freelance,Aucun,71765
+164,Data Ingenieur,Alpes-de-Haute-Provence,Junior,Industrie,PME,Freelance,Total,63962
+165,Data Analyst,Aisne,Intermédiaire,Industrie,PME,Alternance,Aucun,35502
+166,Data Analyst,Hauts-de-Seine,Junior,Tech,Startup,Alternance,Total,89921
+167,Data Engineer,Hauts-de-Seine,Senior,Santé,PME,Stage,Total,66809
+168,Data Ingenieur,Alpes-de-Haute-Provence,Junior,Tech,Startup,CDD,Aucun,56872
+169,Data Ingenieur,Aisne,Senior,Finance,Startup,Alternance,Aucun,57819
+170,Data Engineer,Hauts-de-Seine,Senior,Marketing,PME,Alternance,Aucun,79634
+171,Data Engineer,Val-d'Oise,Junior,Marketing,Grande entreprise,Freelance,Partiel,81150
+172,Data Engineer,Hauts-de-Seine,Senior,Industrie,PME,CDI,Aucun,59009
+173,Data Engineer,Seine-Saint-Denis,Intermédiaire,Tech,PME,CDI,Total,66079
+174,Data Engineer,Hauts-de-Seine,Junior,Finance,Grande entreprise,CDI,Total,41504
+175,Data Analyste,Aisne,Intermédiaire,Santé,Startup,CDD,Aucun,51216
+176,Data Engineer,Val-d'Oise,Junior,Tech,Grande entreprise,CDI,Total,60356
+177,Data Engineer,Aisne,Intermédiaire,Finance,Grande entreprise,Alternance,Partiel,83854
+178,Data Analyst,Hauts-de-Seine,Junior,Tech,PME,CDD,Aucun,82931
+179,Data Engineer,Val-de-Marne,Junior,Industrie,Grande entreprise,CDI,Total,82821
+180,Data Engineer,Ain,Junior,Autre,Startup,Stage,Partiel,80905
+181,Data Analyst,Val-de-Marne,Junior,Tech,PME,Alternance,Aucun,92314
+182,Data Analyste,Val-de-Marne,Junior,Finance,PME,Freelance,Partiel,48593
+183,Data Analyste,Alpes-de-Haute-Provence,Intermédiaire,Finance,Startup,CDD,Partiel,60478
+184,Data Analyst,France,Senior,Tech,PME,CDD,Partiel,59437
+185,Data Ingenieur,Alpes-de-Haute-Provence,Intermédiaire,Marketing,Grande entreprise,CDD,Aucun,88424
+186,Data Scientist,Ain,Intermédiaire,Santé,Startup,CDI,Total,59670
+187,Data Engineer,Aisne,Intermédiaire,Santé,PME,Alternance,Partiel,82335
+188,Data Ingenieur,Hauts-de-Seine,Junior,Industrie,Grande entreprise,Alternance,Aucun,40734
+189,Data Ingenieur,Alpes-de-Haute-Provence,Senior,Marketing,PME,CDI,Total,71759
+190,Data Ingenieur,Ain,Intermédiaire,Autre,Startup,CDD,Total,73100
+191,Data Engineer,Hauts-de-Seine,Senior,Autre,Grande entreprise,Alternance,Total,71862
+192,Data Analyst,Val-de-Marne,Junior,Santé,Startup,Stage,Partiel,83921
+193,Data Analyste,Alpes-de-Haute-Provence,Junior,Industrie,PME,CDD,Partiel,73773
+194,Data Ingenieur,Allier,Senior,Autre,Grande entreprise,Freelance,Total,94589
+195,Data Analyst,Ain,Junior,Tech,Startup,Freelance,Aucun,88360
+196,Data Analyste,Val-d'Oise,Intermédiaire,Finance,Grande entreprise,Freelance,Aucun,55547
+197,Data Engineer,Val-de-Marne,Junior,Tech,Grande entreprise,Freelance,Aucun,54553
+198,Data Engineer,Val-de-Marne,Junior,Santé,PME,Freelance,Aucun,95862
+199,Data Analyste,France,Senior,Finance,PME,Stage,Aucun,71585
