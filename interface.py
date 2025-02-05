@@ -1,24 +1,22 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from streamlit_modal import Modal
 
 
 # point à garder en tête: il faut qu'à l'exécution de ce code soit automatisé avec le scraping; actuellement nous considérons que la base 
 # chargement des données
 df_offres = pd.read_csv("df_offres.csv", sep=',')
+df_offres2 = pd.read_csv("df_offres_x.csv", sep=',')
 
-# configuration de la page
-st.set_page_config(page_title="Analyse du marché de l'emploi DATA", layout="wide")
-st.title("Analyse du marché de l'emploi DATA")
-
-# Barre de navigation HTML + CSS
+st.write(df_offres2.head(5))
+# barre de navigation HTML + CSS
 st.markdown(
     """
     <style>
         .nav-bar {
             display: flex;
             align-items: center; /* Alignement vertical */
-            background-color: #ffffff;
             padding: 10px 50px;
         }
 
@@ -55,7 +53,7 @@ st.markdown(
 
     <div class="nav-bar">
         <div class="logo-container">
-            <img src="C:/Users/Lenovo/Documents/WCS/GitHub/wild-find-job/images/wcj.PNG" width="200">
+            <h1 class="logo-text"style="font-size: 45px; font-weight: bold; color:rgb(245, 247, 248); font-family: Arial, sans-serif; text_align: left;">Wild Find Job</h1>
         </div>
         <div class="nav-links">
             <div class="nav-link-box">
@@ -129,7 +127,7 @@ def accueil():
                 teletravail = st.multiselect("Télétravail", ["Complet", "Partiel", "Occasionnel"])
 
         resultats = None 
-        # filtre dynamyque       
+              
         results = filtrer_offres(df_offres, intitule_poste, localisation, niveau_experience, secteur_d_activite, taille_entreprise, type_de_contrat, teletravail)
         if teletravail:
                     results = filtrer_offres(df_offres, intitule_poste, localisation, niveau_experience, secteur_d_activite, taille_entreprise, type_de_contrat, teletravail) 
@@ -143,11 +141,13 @@ def accueil():
         resultats.drop(columns=['index_y', 'annonce_y', 'lien_y'], inplace=True)
         resultats.to_csv("resultats.csv")
         
+        # initialisation des valeurs des kpis à afficher
         nombre_annonces = len(resultats)
         nombre_entreprises = resultats["nom_entreprise"].nunique()
         nombre_cdi = len(resultats[resultats["type_de_contrat"] == "CDI"])
         nombre_teletravail = len(resultats[resultats["teletravail"] != "Aucun"])
 
+    # code d'affichage des kpis sur l'ensemble des annonces
     with st.container():
         col1, col2, col3, col4, col5 = st.columns(5)
         col1.metric(f"📢 Annonces", value=nombre_annonces)
@@ -179,9 +179,7 @@ def accueil():
             </a>
         """, unsafe_allow_html=True)
 
-     # code pour afficher les offres               
-    st.write(resultats)  # affiche les résultats filtrés
-
+    # code pour afficher un résumé des offres               
     col6, col7 = st.columns(2)
     
     offre_selectionnee = None
@@ -213,21 +211,43 @@ def accueil():
                         if st.button(f"Voir l'offre", key=i):
                             offre_selectionnee = i
                 st.write(f"🏠Télétravail {resultats.iloc[i]['teletravail']}")
+    
+    # code d'affichage du détail de l'offre
+    modal = Modal("Détails de l'offre", key="offre_modal")
     if offre_selectionnee is not None:
-        st.write("Détails de l'offre sélectionnée:")
-        afficher_detail_offre(resultats.iloc[offre_selectionnee])
+        annonce_affichee = resultats.iloc[offre_selectionnee]
+        if modal.open():
+            with modal.container():
+                st.markdown(annonce_affichee['annonce_x'], unsafe_allow_html=True) 
+                if pd.notna(annonce_affichee["lien_x"]):
+                    st.markdown(f"[Voir l'offre complète]({annonce_affichee['lien_x']})", unsafe_allow_html=True)
+    if offre_selectionnee is not None:
+        modal.open()
+    # if offre_selectionnee is not None:
+    #     st.switch_page(f"{offre_selectionnee}")
+    #     afficher_detail_offre(resultats)
     return
 
 def analyser_tendances(df, poste):
     return
-    
+
+def afficher_detail_offre(df):
+    params = st.query_params
+    offre_id = int(params.get("offre", [None])[0])
+
+    if offre_id is not None:
+        annonce_affichee = df.iloc[offre_id]
+
+        st.title("Détails de l'offre")
+        st.markdown(annonce_affichee['annonce_x'], unsafe_allow_html=True)
+        
+        if pd.notna(annonce_affichee["lien"]):
+            st.markdown(f"[Voir l'offre complète]({annonce_affichee['lien']})", unsafe_allow_html=True)
 
 def afficher_raison_wildfindjob():
     st.title("A propos de Wild Find Job")
     st.text("Wild Find Job est un projet de......")
 
-def afficher_detail_offre():
-    st.title("Détail de l'offre")
 
 # Récupération des paramètres d'URL (méthode recommandée)
 params = st.query_params
@@ -236,10 +256,9 @@ metier = params.get("metier", [None])[0]
 
 if nav == "accueil":
     accueil()
+    
 elif nav == "recherche":
     afficher_raison_wildfindjob()
-elif nav == "detail":
-    afficher_detail_offre()
 elif nav == "tendance" and metier:
     analyser_tendances(metier)
 else:
