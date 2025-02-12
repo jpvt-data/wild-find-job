@@ -39,9 +39,11 @@ df = pd.read_csv("./data/datasets/propre/df_clean2_nlp.csv")
 # Conversion des dates
 df["PublishDate"] = pd.to_datetime(df["PublishDate"])
 
+
 # 🔹 **Correction des colonnes contenant des listes**
 def convertir_listes(colonne):
     return colonne.apply(lambda x: ast.literal_eval(x) if isinstance(x, str) and x.startswith("[") else [])
+
 
 df["Competences_Clés"] = convertir_listes(df["Competences_Clés"])
 df["Outils"] = convertir_listes(df["Outils"])
