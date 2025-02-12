@@ -285,7 +285,8 @@ def accueil():
 def analyser_tendances(poste):
     st.title(f"📊 Analyse des tendances pour {poste}")
     st.write("Ici, j'afficherai les tendances du métier.")
-    
+
+
     # retour à l'accueil
     if st.button("⬅ Retour"):
         st.query_params["nav"] = "accueil"
