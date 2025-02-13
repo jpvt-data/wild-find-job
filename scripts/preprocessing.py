@@ -209,18 +209,18 @@ print(f"✅ traitement des salaires terminée")
 def attribuer_categorie(metier):
     metier = metier.lower()
     
-    if re.search(r"(engineer|developer|software|base|bases|center|miner|technicien|ing[ée]nieur|administrateur|administratrice)", metier):
+    if re.search(r"(engineer|\bdevel[\wéèêëàä]*|software|\bbase[\wéèêëàä]*|center|miner|\btech[\wéèêëàä]*|ing[ée]nieur|\badmin[\wéèêëàä]*)", metier):
 
         return 'Ingénierie des données'
     
-    elif re.search(r"(scientist|machine|learning|research|model|science)", metier):
+    elif re.search(r"(\bscien[\wéèêëàä]*|machine|learning|research|model)", metier):
     
         return 'Science des données'
     
-    elif re.search(r"(analyst|analyste|business|specialist|specialiste|qualit[eé])", metier):
+    elif re.search(r"(\banalyst[\wéèêëàä]*|business|\bspecialist[\wéèêëàä]*|qualit[eé])", metier):
         return 'Analyse des données'
     
-    elif re.search(r"(manager|consultant|product|architect|architecte|consultant|responsable|protection)", metier):
+    elif re.search(r"(gouvernance|governance|\bmanag[\wéèêëàä]*|product|\barchitect[\wéèêëàä]*|lead|consultant|responsable|protection)", metier):
     
         return 'Gestion et management'
     else:
