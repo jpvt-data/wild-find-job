@@ -6,8 +6,8 @@ import spacy
 from spacy.matcher import PhraseMatcher
 from spacy.lang.fr.stop_words import STOP_WORDS
 import warnings
-warnings.simplefilter(action='ignore')
 import time
+warnings.simplefilter(action='ignore')
 
 
 # init check progress
