@@ -104,7 +104,7 @@ def accueil():
 
     # formulaire de recherche
     with st.container():
-        col1, col2, col3 = st.columns([0.8, 1, 1])
+        col1, col2, col3 = st.columns([1, 1, 1])
         
         with col1:
             intitule_poste = st.selectbox("Intitulé du poste", sorted(df_offres2["OfferLabel"].unique()), index=None, placeholder="Choisissez un métier")
