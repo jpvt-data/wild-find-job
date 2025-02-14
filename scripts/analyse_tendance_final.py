@@ -20,10 +20,14 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+
+
 st.title("📊 Analyse des Tendances des Métiers de la Data")
 
+st.markdown("<br>", unsafe_allow_html=True)
+
 st.markdown("""
-<div style='font-size:22px;'>
+<div style='font-size:28px;'>
 <br>Cette page vous permet d'analyser <b>les tendances actuelles du marché de l'emploi</b> dans les métiers de la Data.<br>
 Cette analyse est réalisée à partir des offres d'emploi récupérées sur divers sites spécialisés,
 assurant ainsi des tendances constamment mises à jour pour refléter le marché en temps réel.<br>
@@ -36,7 +40,7 @@ l'évolution des offres, des salaires et des types de contrats tout en choisissa
 st.markdown("<hr style='border: 1px solid #C49BDA;'>", unsafe_allow_html=True)
 
 # --- Chargement des données ---
-df = pd.read_csv("./data/datasets/propre/df_clean2_nlp.csv")
+df = pd.read_csv("./data/datasets/propre/df_clean3_nlp.csv")
 
 # Conversion des dates
 df["PublishDate"] = pd.to_datetime(df["PublishDate"])
@@ -45,7 +49,6 @@ df["PublishDate"] = pd.to_datetime(df["PublishDate"])
 # 🔹 **Correction des colonnes contenant des listes**
 def convertir_listes(colonne):
     return colonne.apply(lambda x: ast.literal_eval(x) if isinstance(x, str) and x.startswith("[") else [])
-
 
 df["Competences_Clés"] = convertir_listes(df["Competences_Clés"])
 df["Outils"] = convertir_listes(df["Outils"])
@@ -56,13 +59,13 @@ st.markdown("## 🔹 Critères d'analyse")
 col1, col2, col3 = st.columns([0.3, 0.2, 0.5])
 
 with col1:
-    Métier = col1.selectbox("Métier", ["Tous"] + sorted(df["OfferLabel"].unique()))
+    Métier = col1.selectbox("Métier", ["Tous"] + sorted(df["categorie_metier"].unique()))
     Domaine = col1.selectbox("Domaine", ["Tous"] + sorted(df["Domaine"].unique()))
 
 with col3:
     # st.markdown("### 🔹 Filtres disponibles")
     st.markdown("""
-                <div style='font-size:22px;'>
+                <div style='font-size:24px;'>
                 <br>🔹 Sélectionnez un métier et un domaine pour affiner votre recherche.
                 <br><br>
                 🔹 Les résultats seront mis à jour dynamiquement en fonction de vos choix.<br>
@@ -75,20 +78,15 @@ st.markdown("<hr style='border: 1px solid #C49BDA;'>", unsafe_allow_html=True)
 # --- Filtrage des données ---
 filtered_df = df.copy()
 if Métier != "Tous":
-    filtered_df = filtered_df[filtered_df["OfferLabel"] == Métier]
+    filtered_df = filtered_df[filtered_df["categorie_metier"] == Métier]
 if Domaine != "Tous":
     filtered_df = filtered_df[filtered_df["Domaine"] == Domaine]
 
 
 #####################################################################
 
-
-#####################################################################
-
-
-
-# --- Section 1 : Répartition du Marché ---
-st.markdown("## 🔹 Répartition du marché de l'emploi")
+# --- Section 1 : Indicateurs Clés ---
+st.markdown("## 🔹 Indicateurs Clés")
 
 # --- KPIs Dynamiques ---
 kpi1, kpi2, kpi3, kpi4 = st.columns(4)
@@ -100,22 +98,27 @@ with kpi2:
 with kpi3:
     st.markdown(f"""<div style='background-color: #F8F0FC; border: 2px solid #C49BDA; border-radius: 10px; padding: 5px; font-size: 26px; text-align: center;'>📆 Offres récentes<br><b>{filtered_df[filtered_df['PublishDate'] >= pd.Timestamp.today() - pd.DateOffset(days=30)].shape[0]}</b></div>""", unsafe_allow_html=True)
 with kpi4:
-    st.markdown(f"""<div style='background-color: #F8F0FC; border: 2px solid #C49BDA; border-radius: 10px; padding: 5px; font-size: 26px; text-align: center;'>🖥️ Télétravail<br><b>{filtered_df[filtered_df["Telework"] == "Oui"].shape[0]}</b></div>""", unsafe_allow_html=True)
+    filtered_df.rename(columns={"salaire_min": "Salaire Minimum", "salaire_max": "Salaire Maximum"}, inplace=True)
+    df_salaire2 = filtered_df[["Salaire Minimum", "Salaire Maximum"]].dropna()  # Supprime les NaN
+    df_salaire2["Salaire Moyen"] = df_salaire2[["Salaire Minimum", "Salaire Maximum"]].mean(axis=1)
+    salaire_moyen_selection = df_salaire2["Salaire Moyen"].mean()
+    st.markdown(f"""<div style='background-color: #F8F0FC; border: 2px solid #C49BDA; border-radius: 10px; padding: 5px; font-size: 26px; text-align: center;'>💰 Salaire Moyen<br><b>{salaire_moyen_selection:.0f} €</b></div>""", unsafe_allow_html=True)
+
 
 st.markdown("<hr style='border: 1px solid #C49BDA;'>", unsafe_allow_html=True)
 
 ##################################################################
 
+# --- Section 2 : Contrats & Télétravail ---
 
-# --- Section Contrats & Télétravail ---
+st.markdown("## 🔹 Analyse des Contrats et Télétravail")
 
 col1, col2 = st.columns(2)
 
-###################################################################
-
 col1.markdown(f"""<div style='font-size: 26px; text-align: center;'><b>🔹 Offres par Type de Contrat<b></div>""", unsafe_allow_html=True)
 
-# Jauges Contrat
+# 1 Jauges Contrat
+
 import plotly.graph_objects as go
 
 df_contrats = filtered_df["ContractType"].value_counts().reset_index()
@@ -167,13 +170,13 @@ fig_contrats_jauge.update_layout(margin=dict(t=80, b=10))  # t = top, b = bottom
 col1.plotly_chart(fig_contrats_jauge, use_container_width=True)
 
 ##################################################################
-#2
-#Télétravail#
+
+#2 Télétravail
 
 col2.markdown(f"""<div style='font-size: 26px; text-align: center;'><b>🔹 Répartition du Télétravail<b><br><br></div>""", unsafe_allow_html=True)
 
 # Filtrer uniquement les valeurs valides (exclure "NC")
-df_telework = df[df["Telework"] != "NC"]["Telework"].value_counts().reset_index()
+df_telework = filtered_df[filtered_df["Telework"] != "NC"]["Telework"].value_counts().reset_index()
 df_telework.columns = ["Type de Télétravail", "Nombre"]
 
 # Définir les couleurs
@@ -209,7 +212,9 @@ st.markdown("<hr style='border: 1px solid #C49BDA;'>", unsafe_allow_html=True)
 
 ##################################################################
 
-#SALAIRES#
+# --- Section 3 : Salaires ---
+
+st.markdown("## 🔹 Analyse des Salaires")
 
 col1, col2, col3 = st.columns([0.45, 0.1, 0.45])
 
@@ -218,9 +223,8 @@ col1.markdown(f"""<div style='font-size: 26px; text-align: center;'><b>🔹 Rép
 import plotly.express as px
 
 # ---- Nettoyage des données ----
-df.rename(columns={"salaire_min": "Salaire Minimum", "salaire_max": "Salaire Maximum"}, inplace=True)
-df_salaire = df[["Salaire Minimum", "Salaire Maximum"]].dropna()  # Supprime les NaN
-df_salaire = df_salaire.melt(var_name="Type de Salaire", value_name="Montant")  # Transformation pour boxplot
+filtered_df.rename(columns={"salaire_min": "Salaire Minimum", "salaire_max": "Salaire Maximum"}, inplace=True)
+df_salaire = df_salaire2.melt(var_name="Type de Salaire", value_name="Montant")  # Transformation pour boxplot
 
 # ---- Création du Boxplot ----
 fig_box = px.box(df_salaire, 
@@ -252,11 +256,13 @@ col3.markdown("<br>", unsafe_allow_html=True)
 
 ###########
 
-# ---- Création de l'histogramme + KDE ----
+# ---- histogramme + KDE ----
 
 col1.markdown("""
                 <div style='font-size:22px;'>
-                <br><br><br><br><br>Texte à modifier !
+                <br><br><br><br><br>Ce graphique illustre la distribution des salaires moyens issus des offres d'emploi analysées.<br>
+                <br>L'histogramme représente la fréquence des salaires moyens, tandis que la courbe superposée montre la densité de distribution, permettant d'observer la tendance générale.<br>
+                <br>Ce visuel met en évidence la répartition des salaires en fonction des offres disponibles, en révélant les plages de salaires les plus courantes ainsi que la présence éventuelle de salaires plus rares et extrêmes.<br>
                 </div>
                 """, unsafe_allow_html=True)
 
@@ -266,7 +272,7 @@ col3.markdown(f"""<div style='font-size: 26px; text-align: center;'><b>🔹 Dist
 
 import plotly.figure_factory as ff
 
-df_salaire = df[["Salaire Minimum", "Salaire Maximum"]].dropna()  # Suppression des NaN
+df_salaire = filtered_df[["Salaire Minimum", "Salaire Maximum"]].dropna()  # Suppression des NaN
 df_salaire["Salaire Minimum"] = pd.to_numeric(df_salaire["Salaire Minimum"], errors="coerce")
 df_salaire["Salaire Maximum"] = pd.to_numeric(df_salaire["Salaire Maximum"], errors="coerce")
 df_salaire["Salaire Moyen"] = df_salaire[["Salaire Minimum", "Salaire Maximum"]].mean(axis=1)
@@ -297,6 +303,10 @@ st.markdown("<hr style='border: 1px solid #C49BDA;'>", unsafe_allow_html=True)
 
 ##################################################################
 
+# --- Section 4 : Carte et Graphique Temporelle ---
+
+st.markdown("## 🔹 Répartition Géographique et Offres dans le temps")
+
 col1, col2, col3 = st.columns([0.5, 0.1, 0.4])
 
 #CARTES#
@@ -308,8 +318,8 @@ with col1:
     st.markdown(f"""<div style='font-size: 26px; margin-left: 100px;'><b>🗺️ Offres d'Emploi par Région<b></div>""", unsafe_allow_html=True)
 
     # ---- Étape 1 : Transformer les chaînes en listes et éclater les valeurs ----
-    df["Region"] = df["Region"].astype(str).apply(lambda x: x.replace("[", "").replace("]", "").replace("'", "").split(", "))  # Nettoyage et conversion en liste
-    df_exploded = df.explode("Region").reset_index(drop=True)  # Éclater les valeurs
+    filtered_df["Region"] = filtered_df["Region"].astype(str).apply(lambda x: x.replace("[", "").replace("]", "").replace("'", "").split(", "))  # Nettoyage et conversion en liste
+    df_exploded = filtered_df.explode("Region").reset_index(drop=True)  # Éclater les valeurs
 
     # ---- Étape 2 : Compter le nombre d'offres par région ----
     df_grouped = df_exploded["Region"].value_counts().reset_index()
@@ -378,14 +388,14 @@ with col3:
                 </div>
                 """, unsafe_allow_html=True)
 
-st.markdown("<hr style='border: 1px solid #C49BDA;'>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
 
 ###################################################################
 
 st.markdown(f"""<div style='font-size: 26px; margin-left: 100px;'><b>📈 Évolution quotidienne des offres d'emploi<b></div>""", unsafe_allow_html=True)
 
 # Évolution journalière des offres
-df_trend_daily = df.groupby(df["PublishDate"].dt.strftime('%Y-%m-%d')).size().reset_index(name="Nombre d'offres")
+df_trend_daily = filtered_df.groupby(df["PublishDate"].dt.strftime('%Y-%m-%d')).size().reset_index(name="Nombre d'offres")
 
 # Création d'un graphique en aires avec granularité journalière
 fig_area = px.area(
@@ -413,6 +423,12 @@ st.plotly_chart(fig_area, use_container_width=True)
 st.markdown("<hr style='border: 1px solid #C49BDA;'>", unsafe_allow_html=True)
 
 ###################################################################
+
+# --- Section 5 : Entreprises et Secteurs d'Activité ---
+
+st.markdown("## 🔹 Entreprises et Secteurs d'activité")
+
+
 # Domaine
 col1, col2 = st.columns(2)
 
@@ -430,7 +446,7 @@ col1.altair_chart(fig2, use_container_width=True)
 with col2:
     st.markdown(
         """
-        ### 🏢 Répartition des offres par secteur 
+        ### 🏢 Répartition des offres par secteur d'activité
         <br><div style='font-size:22px;'>
         Ce graphique permet d’identifier les secteurs d'activité les plus 
         dynamiques en termes de recrutement. 
@@ -442,10 +458,7 @@ with col2:
         unsafe_allow_html=True
     )
 
-# st.markdown("<div style='margin-bottom: 50px;'></div>", unsafe_allow_html=True)
-
-st.markdown("<hr style='border: 1px solid #C49BDA;'>", unsafe_allow_html=True)
-
+st.markdown("<br>", unsafe_allow_html=True)
 
 ###################################################################
 # Entreprises
@@ -468,7 +481,7 @@ with col1:
 
 
 # WordCloud présence Entreprises
-entreprises_freq = df["CompanyName"].value_counts().to_dict()
+entreprises_freq = filtered_df["CompanyName"].value_counts().to_dict()
 
 wordcloud = WordCloud(
     width=600,
@@ -488,7 +501,8 @@ st.markdown("<hr style='border: 1px solid #C49BDA;'>", unsafe_allow_html=True)
 
 ###################################################################
 
-# --- Section 2 : Analyse des Compétences, Outils et Soft Skills ---
+# --- Section 6 : Analyse des Compétences, Outils et Soft Skills ---
+
 st.markdown("""
 ## 🔷 Analyse des compétences clés, outils et soft skills demandés
 
