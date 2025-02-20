@@ -1154,7 +1154,6 @@ st.markdown("""
     </div>
     <div class="nav-buttons">  <a href="?page=accueil" class="nav-link">Accueil</a>
         <a href="?page=analyse" class="nav-link">Analyse des tendances</a>
-        <a href="?page=a_propos" class="nav-link"> À propos</a>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -1171,7 +1170,7 @@ if current_page == "accueil":
 
 elif current_page == "analyse":
     analyser_tendances()
-elif current_page == "a_propos":
-    afficher_raison_wildfindjob()
+# elif current_page == "a_propos":
+#     afficher_raison_wildfindjob()
 else:
     st.write("Page non trouvée")
