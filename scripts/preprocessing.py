@@ -228,7 +228,8 @@ def attribuer_categorie(metier):
     
 
 df_final2['categorie_metier'] = df_final2['OfferLabel'].apply(attribuer_categorie)
-
+# df_final2['details_offre'] = df_final2["Description"].copy()
+# df_final2['Profile_origine'] = df_final2["Profile"].copy()
 
 # check progress
 end_time3 = time.time()
@@ -275,6 +276,10 @@ def nettoyer_texte(texte):
     tokens = [token.lemma_ for token in doc if token.text not in STOP_WORDS and not token.is_punct]
     return " ".join(tokens)
 
+
+# sauvegarde les champs description &  Profile avant NLP 
+df_clean['details_offre'] = df_clean["Description"]
+df_clean['Profile_origine'] = df_clean["Profile"]
 
 # Appliquer le nettoyage et la lemmatisation
 df_clean["Profile"] = df_clean["Profile"].apply(nettoyer_texte)
